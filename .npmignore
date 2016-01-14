@@ -5,4 +5,8 @@ test/
 src/
 docs/
 .gitignore
+.codeclimate.yml
 gruntfile.js
+.travis.yml
+.eslintignore
+.eslintrc

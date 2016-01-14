@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/DamienFontaine/angular-lunarc-core.svg?branch=master)](https://travis-ci.org/DamienFontaine/angular-lunarc-core)
 [![Code Climate](https://codeclimate.com/github/DamienFontaine/angular-lunarc-core/badges/gpa.svg)](https://codeclimate.com/github/DamienFontaine/angular-lunarc-core)
+[![Test Coverage](https://codeclimate.com/github/DamienFontaine/angular-lunarc-core/badges/coverage.svg)](https://codeclimate.com/github/DamienFontaine/angular-lunarc-core/coverage)
+[![Issue Count](https://codeclimate.com/github/DamienFontaine/angular-lunarc-core/badges/issue_count.svg)](https://codeclimate.com/github/DamienFontaine/angular-lunarc-core)
 
 ## Installation
 

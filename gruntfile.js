@@ -12,8 +12,11 @@ module.exports = function(grunt) {
     },
     browserify: {
       options: {
-        debug: true,
-        extension: ['.js']
+        extension: ['.js'],
+        external: [
+          "angular-jwt",
+          "angular-resource"
+        ]
       },
       core: {
         src: 'src/angular-lunarc-core.js',

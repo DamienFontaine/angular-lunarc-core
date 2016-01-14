@@ -1,11 +1,19 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
 before_install:
-  - npm install -g grunt-cli
-  - npm install -g bower
-  - npm install -g codeclimate-test-reporter
+- npm install -g grunt-cli
+- npm install -g bower
+- npm install -g codeclimate-test-reporter
 install: npm install
 before_script: grunt build
 after_script:
-  - codeclimate-test-reporter < coverage/**/lcov.info
+- codeclimate-test-reporter < coverage/**/lcov.info
+deploy:
+  provider: npm
+  email: damien.fontaine@lineolia.net
+  api_key:
+    secure: lLMoAcoEs7GDP+THMLpG70TTQGbYG+s6N5kgf8GdO74hVbCBUELWV1eeHbMKL02jlOKE1QqinnrEJyT4A25quW4MmQDvr7xt6GSb2sjg+hWWWrNugQYl20VNX+CY+wW1z7vpjr3VXew9a39r3vxPYlvCP6uW8F9JGe7+rFUjo0SvYlgfRAA8GRebR5XSSyjMs8g5um/owpCfpP9LDePbiiZCrXdEI9ujsdLk6gxZ5cfDo25vRfdHmmpZxgXIZnnQLJ1+e5CZRNqlsxUnIj0oL4W0GjM0dgQ4PLLW2FOepRDm5fJq13fben+DZn6G7c5yKUVgiJZdk84X/C6R7Ol93kO5KTQVLCa238R6xGOsO6P38WYJmjegKHkQQVibtN/zvIiQPi5x4NHDx4pkkdl1heSfX+bkM7GD/4VID3bYnSIi5OXTGYUBnyxmpFp/IH8P6JqXh7EFEcf8SogSlQXZl59aO5Vo4O5IzffKLH19wSx8epe8HbF+hNECi8QZfJPX50fmLfXhIv9mUx4Q3PnaUjKy0huZ3QOROgx0qh7dU1RvuqPH26t3i7sQ5qvgQYVoup1YXE67QHq53R+x3NtaL+3Qs4u7SoMWtDQhwMceh97vIUkx72mdbT0qQnzbp6ipFYlsiu13xk8Oqp06+vJ42S+UVabkgf+Y5nXmrqz30OY=
+  on:
+    repo: DamienFontaine/angular-lunarc-core
+    branch: master

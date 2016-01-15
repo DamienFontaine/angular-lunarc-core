@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       },
       core: {
         src: ['src/**/*.js'],
-        dest: 'lib/angular-lunarc-core.js',
+        dest: 'lib/angular-lunarc-core.js'
       }
     },
     browserify: {
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
       unit: {
         configFile: 'test/karma.conf.js'
       }
-    },
+    }
   });
   // Load NPM tasks
   require('load-grunt-tasks')(grunt);

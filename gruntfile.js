@@ -10,17 +10,13 @@ module.exports = function(grunt) {
     jshint: {
       all: ['gruntfile.js', 'src/**/*.js']
     },
-    browserify: {
+    concat: {
       options: {
-        extension: ['.js'],
-        external: [
-          "angular-jwt",
-          "angular-resource"
-        ]
+        separator: ';',
       },
       core: {
-        src: 'src/angular-lunarc-core.js',
-        dest: 'lib/angular-lunarc-core.js'
+        src: ['src/**/*.js'],
+        dest: 'lib/angular-lunarc-core.js',
       }
     },
     uglify: {
@@ -63,8 +59,8 @@ module.exports = function(grunt) {
   // Load NPM tasks
   require('load-grunt-tasks')(grunt);
   // Tasks
-  grunt.registerTask('default', ['jshint', 'browserify', 'uglify']);
-  grunt.registerTask('test', ['jshint', 'browserify', 'uglify', 'karma']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask('test', ['jshint','concat', 'uglify', 'karma']);
   grunt.registerTask('docs', ['ngdocs', 'connect']);
-  grunt.registerTask('build', ['browserify', 'uglify', 'ngdocs']);
+  grunt.registerTask('build', ['concat', 'uglify', 'ngdocs']);
 };

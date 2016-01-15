@@ -19,6 +19,19 @@ module.exports = function(grunt) {
         dest: 'lib/angular-lunarc-core.js',
       }
     },
+    browserify: {
+      options: {
+        extension: ['.js'],
+        external: [
+          "angular-jwt",
+          "angular-resource"
+        ]
+      },
+      core: {
+        src: 'src/**/*.js',
+        dest: 'lib/angular-lunarc-core.js'
+      }
+    },
     uglify: {
       options: {
         mangle: false
@@ -59,8 +72,8 @@ module.exports = function(grunt) {
   // Load NPM tasks
   require('load-grunt-tasks')(grunt);
   // Tasks
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
-  grunt.registerTask('test', ['jshint','concat', 'uglify', 'karma']);
+  grunt.registerTask('default', ['jshint', 'browserify', 'uglify']);
+  grunt.registerTask('test', ['jshint','browserify', 'uglify', 'karma']);
   grunt.registerTask('docs', ['ngdocs', 'connect']);
-  grunt.registerTask('build', ['concat', 'uglify', 'ngdocs']);
+  grunt.registerTask('build', ['browserify', 'uglify', 'ngdocs']);
 };

@@ -23,6 +23,24 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "lunarc.mail.Mail",
+      "shortName": "lunarc.mail.Mail",
+      "type": "service",
+      "moduleName": "lunarc.mail",
+      "shortDescription": "Email",
+      "keywords": "api email lunarc mail service"
+    },
+    {
+      "section": "api",
+      "id": "lunarc.mail.MailService",
+      "shortName": "lunarc.mail.MailService",
+      "type": "service",
+      "moduleName": "lunarc.mail",
+      "shortDescription": "Service pour envoyer des emails.",
+      "keywords": "api des email emails envoie envoyer lunarc mail mailservice method pour send service"
+    },
+    {
+      "section": "api",
       "id": "lunarc.user.User",
       "shortName": "lunarc.user.User",
       "type": "service",

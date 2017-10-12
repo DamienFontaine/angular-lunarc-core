@@ -3,7 +3,7 @@ sudo: required
 node_js:
 - '6'
 before_install:
-- yarn install codeclimate-test-reporter
+- npm install -g codeclimate-test-reporter
 install: yarn
 before_script: grunt build
 after_script:

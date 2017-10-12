@@ -1,4 +1,7 @@
 module.exports = function(grunt) {
+
+  const webpackConfig = require('./webpack.config');
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     connect: {
@@ -8,7 +11,10 @@ module.exports = function(grunt) {
       server: {}
     },
     jshint: {
-      all: ['gruntfile.js', 'src/**/*.js']
+      all: ['gruntfile.js', 'src/**/*.js'],
+      options: {
+        esnext: true,
+      }
     },
     concat: {
       options: {
@@ -19,18 +25,8 @@ module.exports = function(grunt) {
         dest: 'lib/angular-lunarc-core.js'
       }
     },
-    browserify: {
-      options: {
-        extension: ['.js'],
-        external: [
-          "angular-jwt",
-          "angular-resource"
-        ]
-      },
-      core: {
-        src: 'src/**/*.js',
-        dest: 'lib/angular-lunarc-core.js'
-      }
+    webpack: {
+      prod: webpackConfig,
     },
     uglify: {
       options: {
@@ -45,7 +41,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: 'src/**/*.js',
-        tasks: ['jshint', 'browserify']
+        tasks: ['jshint', 'webpack']
       }
     },
     ngdocs: {
@@ -54,8 +50,8 @@ module.exports = function(grunt) {
         title: "angular-lunarc-core",
         html5Mode: false,
         scripts: [
-          'bower_components/angular/angular.js',
-          'bower_components/angular-animate/angular-animate.js'
+          'node_modules/angular/angular.js',
+          'node_modules/angular-animate/angular-animate.js'
         ]
       },
       api: {
@@ -72,8 +68,8 @@ module.exports = function(grunt) {
   // Load NPM tasks
   require('load-grunt-tasks')(grunt);
   // Tasks
-  grunt.registerTask('default', ['jshint', 'browserify', 'uglify']);
-  grunt.registerTask('test', ['jshint','browserify', 'uglify', 'karma']);
+  grunt.registerTask('default', ['jshint', 'webpack', 'uglify']);
+  grunt.registerTask('test', ['jshint','webpack', 'uglify', 'karma']);
   grunt.registerTask('docs', ['ngdocs', 'connect']);
-  grunt.registerTask('build', ['browserify', 'uglify', 'ngdocs']);
+  grunt.registerTask('build', ['webpack', 'uglify', 'ngdocs']);
 };

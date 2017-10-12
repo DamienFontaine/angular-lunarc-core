@@ -1,6 +1,6 @@
 {
   "name": "angular-lunarc-core",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Angular for Lunarc",
   "homepage": "http://github.com/DamienFontaine/angular-lunarc-core.git",
   "repository": {
@@ -9,8 +9,7 @@
   },
   "main": "lib/angular-lunarc-core.js",
   "scripts": {
-    "test": "grunt test",
-    "postinstall": "bower install --config.interactive=false"
+    "test": "grunt test"
   },
   "author": "Damien Fontaine <damien.fontaine@lineolia.net>",
   "license": "AGPL-3.0",
@@ -18,25 +17,26 @@
     "lunarc"
   ],
   "devDependencies": {
-    "browserify-istanbul": "~0.2.1",
+    "angular-mocks": "1.3.15",
+    "angular-animate": "1.3.15",
     "grunt": "0.4.5",
-    "grunt-browserify": "4.0.1",
     "grunt-cli": "0.1.13",
     "grunt-contrib-concat": "0.5.1",
     "grunt-contrib-connect": "0.11.2",
-    "grunt-contrib-jshint": "0.11.0",
+    "grunt-contrib-jshint": "1.1.0",
     "grunt-contrib-uglify": "0.10.1",
     "grunt-contrib-watch": "0.6.1",
     "grunt-karma": "0.12.1",
     "grunt-ngdocs": "0.2.9",
+    "grunt-webpack": "^3.0.2",
     "jasmine-core": "^2.4.1",
     "karma": "0.13.19",
-    "karma-browserify": "~4.4.2",
     "karma-coverage": "0.5.3",
     "karma-jasmine": "0.3.2",
     "karma-phantomjs-launcher": "0.2.1",
     "load-grunt-tasks": "3.3.0",
-    "phantomjs": "^1.9.19"
+    "phantomjs": "^1.9.19",
+    "webpack": "^2.6.1"
   },
   "dependencies": {
     "angular": "1.3.15",

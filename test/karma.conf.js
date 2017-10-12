@@ -1,14 +1,12 @@
-var istanbul = require('browserify-istanbul');
-
 module.exports = function(config) {
   config.set({
     basePath: '../',
-    frameworks: ['browserify', 'jasmine'],
+    frameworks: ['jasmine'],
     files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-resource/angular-resource.js',
-      'bower_components/angular-jwt/dist/angular-jwt.js',
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/angular-resource/angular-resource.js',
+      'node_modules/angular-jwt/dist/angular-jwt.js',
       'src/**/*.js',
       'test/unit/**/*.js'
     ],
@@ -16,17 +14,6 @@ module.exports = function(config) {
     reporters: ['progress', 'coverage'],
     preprocessors: {
       'src/**/*.js': ['browserify']
-    },
-    browserify: {
-      transform: [
-        [
-          'browserify-istanbul', {
-            instrumenterConfig: {
-              embedSource: true
-            }
-          }
-        ]
-      ]
     },
     coverageReporter: {
       dir: 'coverage/',

@@ -13,7 +13,7 @@ module.exports = function(config) {
     exclude: [],
     reporters: ['progress', 'coverage'],
     preprocessors: {
-      'src/**/*.js': ['browserify']
+      'src/**/*.js': ['webpack']
     },
     coverageReporter: {
       dir: 'coverage/',
@@ -22,6 +22,18 @@ module.exports = function(config) {
       }, {
         type: 'lcov'
       }]
+    },
+    webpack: {
+      module: {
+        loaders: [{
+          test: /\.js$/,
+          exclude: /(node_modules)/,
+          loader: 'istanbul-instrumenter-loader'
+        }]
+      }
+    },
+    webpackMiddleware: {
+      noInfo: true,
     },
     port: 9876,
     colors: true,

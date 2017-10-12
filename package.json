@@ -29,13 +29,15 @@
     "grunt-karma": "0.12.1",
     "grunt-ngdocs": "0.2.9",
     "grunt-webpack": "^3.0.2",
+    "istanbul-instrumenter-loader": "3.0.0",
     "jasmine-core": "^2.4.1",
     "karma": "0.13.19",
     "karma-coverage": "0.5.3",
     "karma-jasmine": "0.3.2",
-    "karma-phantomjs-launcher": "0.2.1",
+    "karma-phantomjs-launcher": "1.0.2",
+    "karma-webpack": "2.0.5",
     "load-grunt-tasks": "3.3.0",
-    "phantomjs": "^1.9.19",
+    "phantomjs-prebuilt": "^2.1.8",
     "webpack": "^2.6.1"
   },
   "dependencies": {

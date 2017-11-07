@@ -8,7 +8,7 @@
 ## Installation
 
 ```bash
-$ npm install angular-lunarc-core
+$ yarn add angular-lunarc-core
 ```
 
 ## Licence

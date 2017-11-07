@@ -16,3 +16,5 @@ ratings:
 exclude_paths:
   - test/**/*
   - docs/**/*
+  - lib/angular-lunarc-core.js
+  - lib/angular-lunarc-core.min.js

@@ -7,14 +7,14 @@ engines:
       - javascript
   eslint:
     enabled: true
+  tslint:
+    enabled: true
+    channel: beta
   fixme:
     enabled: true
 ratings:
   paths:
   - "**.js"
-  - "**.jsx"
+  - "**.ts"
 exclude_paths:
   - test/**/*
-  - docs/**/*
-  - lib/angular-lunarc-core.js
-  - lib/angular-lunarc-core.min.js

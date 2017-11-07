@@ -11,3 +11,5 @@ webpack.config.js
 rollup.config.js
 tslint.json
 tsconfig.json
+index.ts
+public_api.ts

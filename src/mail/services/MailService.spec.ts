@@ -13,12 +13,12 @@ describe("lunarc.mail.MailService", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      providers: [
-        MailService,
-      ],
       imports: [
         HttpClientTestingModule,
         HttpClientModule,
+      ],
+      providers: [
+        MailService,
       ],
     });
   }));

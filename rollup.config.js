@@ -6,7 +6,7 @@ export default {
     file: 'dist/bundles/angular-lunarc-core.umd.js',
     format: 'umd',
     exports: 'named',
-    amd: {id: '@lunarc/core'},
+    amd: {id: '@lunarc/core'}
   },
   plugins: [
     uglify()
@@ -22,5 +22,5 @@ export default {
     '@angular/core',
     '@angular/common/http',
     'angular2-jwt/angular2-jwt',
-  ],
+  ]
 }

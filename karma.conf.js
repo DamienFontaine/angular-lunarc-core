@@ -10,7 +10,7 @@ module.exports = function(config) {
       'node_modules/zone.js/dist/sync-test.js',
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/jasmine-patch.js',
-      
+
       'src/**/*.ts'
     ],
     exclude: [],
@@ -21,7 +21,7 @@ module.exports = function(config) {
     karmaTypescriptConfig: {
       compilerOptions: {
 				 target: 'ES6'
-       },
+       }
      },
     coverageReporter: {
       dir: 'coverage/',

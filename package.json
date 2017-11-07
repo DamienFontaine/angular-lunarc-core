@@ -17,6 +17,9 @@
     "build": "npm run transpile && npm run package",
     "watch": "karma start"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Damien Fontaine <damien.fontaine@lineolia.net>",
   "license": "AGPL-3.0",
   "keywords": [

@@ -17,12 +17,12 @@ describe("lunarc.user.UserService", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      providers: [
-        UserService,
-      ],
       imports: [
         HttpClientTestingModule,
         HttpClientModule,
+      ],
+      providers: [
+        UserService,
       ],
     });
   }));
@@ -31,15 +31,15 @@ describe("lunarc.user.UserService", () => {
     inject([UserService, HttpTestingController], (userService, httpMock) => {
 
       const response = [{
+        Email: "test@lunarc.ovh",
         Id: "55f06ff71d41c85de4000001",
         Password: "password",
         Salt: "salt",
-        Email: "test@lunarc.ovh",
       }, {
+        Email: "test2@lunarc.ovh",
         Id: "55f06ff71d41c85de4000002",
         Password: "password2",
         Salt: "salt2",
-        Email: "test2@lunarc.ovh",
       }];
 
       expect(userService).toBeDefined();
@@ -59,13 +59,13 @@ describe("lunarc.user.UserService", () => {
     inject([UserService, HttpTestingController], (userService, httpMock) => {
 
       const response = {
-        Id: "55f06ff71d41c85de4000001",
-        Username: "dfontaine",
+        Email: "damien.fontaine@lineolia.net",
         Firstname: "Damien",
+        Id: "55f06ff71d41c85de4000001",
         Lastname: "Fontaine",
         Password: "password",
         Salt: "salt",
-        Email: "damien.fontaine@lineolia.net",
+        Username: "dfontaine",
       };
 
       expect(userService).toBeDefined();
@@ -104,13 +104,13 @@ describe("lunarc.user.UserService", () => {
     inject([UserService, HttpTestingController], (userService, httpMock) => {
 
       const user = {
-        Id: "1",
         FirstName: "Damien",
+        Id: "1",
       };
 
       const response = {
-        Id: "1",
         Firstname: "Damien",
+        Id: "1",
       };
 
       expect(userService).toBeDefined();
@@ -134,8 +134,8 @@ describe("lunarc.user.UserService", () => {
       };
 
       const response = {
-        Id: "1",
         Firstname: "Damien",
+        Id: "1",
       };
 
       expect(userService).toBeDefined();

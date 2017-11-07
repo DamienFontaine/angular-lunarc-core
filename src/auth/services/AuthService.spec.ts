@@ -1,5 +1,5 @@
-import { UserFactory } from "../../user/factories/UserFactory";
 import { User } from "../../user/factories/User";
+import { UserFactory } from "../../user/factories/UserFactory";
 import { AuthService } from "./AuthService";
 
 import { getTestBed, inject, TestBed } from "@angular/core/testing";
@@ -45,9 +45,9 @@ describe("lunarc.auth.AuthService", () => {
     authService.storeToken(token);
     expect(store.id_token).toBe(token);
     expect(authService.user).toEqual(userFactory.create({
+        Email: "damien.fontaine@lineolia.net",
         Id: "1",
         Username: "dfontaine",
-        Email: "damien.fontaine@lineolia.net",
       }));
   }));
 
@@ -60,9 +60,9 @@ describe("lunarc.auth.AuthService", () => {
     localStorage.setItem("id_token", token);
     expect(authService.isAuthenticated()).toBe(true);
     expect(authService.user).toEqual(userFactory.create({
+      Email: "damien.fontaine@lineolia.net",
       Id: "1",
       Username: "dfontaine",
-      Email: "damien.fontaine@lineolia.net",
     }));
   }));
 

@@ -1,6 +1,6 @@
 import { User, UserFactory } from "../../user/index";
 
-import { JwtHelper } from "angular2-jwt/angular2-jwt";
+import { JwtHelper } from "../helpers/JwtHelper";
 
 import { Injectable } from "@angular/core";
 

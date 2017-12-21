@@ -15,6 +15,12 @@
     "skipLibCheck": true,
     "rootDir": ".",
     "outDir": "dist",
+    "baseUrl": "",
+    "paths": {
+      "@angular/*": [
+        "../node_modules/@angular/*"
+      ]
+    }
   },
   "files": [
     "index.ts"

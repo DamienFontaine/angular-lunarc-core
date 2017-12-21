@@ -1,3 +1,4 @@
+import resolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
@@ -9,18 +10,19 @@ export default {
     amd: {id: '@lunarc/core'}
   },
   plugins: [
+    resolve(),
     uglify()
   ],
   sourcemap: false,
   name: 'angular-lunarc-core',
   globals: {
     '@angular/core': 'core',
-    'angular2-jwt/angular2-jwt': 'angular2Jwt',
-    '@angular/common/http': 'http'
+    '@angular/common/http': 'http',
+    'rxjs/Observable': 'Observable',
   },
   external: [
     '@angular/core',
     '@angular/common/http',
-    'angular2-jwt/angular2-jwt',
+    'rxjs/Observable',
   ]
 }

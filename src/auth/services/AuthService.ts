@@ -33,7 +33,6 @@ export class AuthService {
     const tokenPayload = this.jwtHelper.decodeToken(expToken);
     this.user = this.userFactory.create({
       Email: tokenPayload.email,
-      Id: tokenPayload.id,
       Username: tokenPayload.username,
     });
   }

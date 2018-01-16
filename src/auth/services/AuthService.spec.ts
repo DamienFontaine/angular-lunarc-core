@@ -46,7 +46,6 @@ describe("lunarc.auth.AuthService", () => {
     expect(store.id_token).toBe(token);
     expect(authService.user).toEqual(userFactory.create({
         Email: "damien.fontaine@lineolia.net",
-        Id: "1",
         Username: "dfontaine",
       }));
   }));
@@ -61,7 +60,6 @@ describe("lunarc.auth.AuthService", () => {
     expect(authService.isAuthenticated()).toBe(true);
     expect(authService.user).toEqual(userFactory.create({
       Email: "damien.fontaine@lineolia.net",
-      Id: "1",
       Username: "dfontaine",
     }));
   }));
